@@ -4,7 +4,7 @@
 
 int main()
 {
-  int fahr, cels;
+  float fahr, cels;
   int lower, upper, step;
 
   lower = 0;
@@ -13,9 +13,10 @@ int main()
 
   fahr = lower;
 
+  printf("Deg F\t Deg C\n");
   while (fahr <= upper){
     cels=5*(fahr-32)/9;
-    printf("%d\t%d\n",fahr,cels);
+    printf("%5.0f\t%6.1f\n",fahr,cels);
     fahr = fahr+ step;
   }
 
