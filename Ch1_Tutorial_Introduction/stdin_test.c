@@ -6,11 +6,9 @@ int main()
 {
   int c;           // store the character as an integer
 
-  c=getchar();    // get the character from stdin
 
-  while (c!=EOF){ // while the user has not entered an EOF char
+  while ( (c=getchar()) != EOF){ // while the user has not entered an EOF char
     putchar(c);   // print the character they enter
-    c=getchar();  // get a new character from stdin
   }
   printf("You entered an EOF char\n");
   putchar(EOF);
