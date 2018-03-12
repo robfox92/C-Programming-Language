@@ -2,22 +2,19 @@
 
 /* Print Fahreinheit-Celsius Table for f = 0,20,...,300 */
 
+# define LOWER 20   // lower table limit
+# define UPPER 300  // upper table limit
+# define STEP 20    // table step size
+
+
 int main()
 {
-  float fahr, cels;
-  int lower, upper, step;
-
-  lower = 0;
-  upper = 300;
-  step = 20;
-
-  fahr = lower;
+  int fahr;
 
   printf("Deg F\t Deg C\n");
-  while (fahr <= upper){
-    cels=5*(fahr-32)/9;
-    printf("%5.0f\t%6.1f\n",fahr,cels);
-    fahr = fahr+ step;
+
+  for (fahr = LOWER; fahr <= UPPER; fahr += STEP){
+    printf("%3d %6.1f\n",fahr,(5.0/9.0*(fahr-32)));
   }
 
 }
