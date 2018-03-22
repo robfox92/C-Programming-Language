@@ -2,11 +2,10 @@
 
 // count characters in input
 int main(){
-  long nc = 0; //store the character count as a long int, init it as 0
+  double nc; //store the character count as a double
 
-  while (getchar() != EOF) // while the user hasn't entered an EOF
-  {
-    ++nc;                  // increment the character count
-  }
-  printf("%ld\n",nc);      // %ld tells printf we are printing a long int
+  for (nc = 0; getchar != EOF; ++nc) //weird for loop that kinda goes forever?
+    ;                                //do nothing within the loop
+                                     //isolated semicolon to indicate nothing
+  printf("%.0f\n", nc);
 }
