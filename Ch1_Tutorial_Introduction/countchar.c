@@ -7,5 +7,6 @@ int main(){
   for (nc = 0; getchar != EOF; ++nc) //weird for loop that kinda goes forever?
     ;                                //do nothing within the loop
                                      //isolated semicolon to indicate nothing
+                                     //aka 'null statement'
   printf("%.0f\n", nc);
 }
