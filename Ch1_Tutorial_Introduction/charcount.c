@@ -14,10 +14,12 @@ int main()
   }
 
   while ( ( c = getchar() ) != EOF){
-    if (   c >= '0'    // if the char is a digit
+    if (   c >= '0'             // if the char is a digit
         && c <= '9'){
-      ++ndigit[c-'0']; // increment the digit counter
-    }
+      ++ndigit[c-'0'];          // increment the digit counter
+    }                           // `c-'0'` works because chars are small ints
+                                // so the expression is really evaluating an integer representation
+                                // of two characters, but is ultimately about ints
     else if (   c == ' '
              || c == '\n'
              || c == '\t'){
